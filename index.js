@@ -1,4 +1,6 @@
 const express = require('express');
+const jwt = require('jsonwebtoken');
+require('dotenv').config();
 const cookieParser = require('cookie-parser');  
 const app = express();
 
@@ -11,6 +13,24 @@ const movies = require('./data/movie.js');
 const users = require('./data/user.js');
 // Require Swagger
 const api_docs = require('./swagger/index.js');
+
+
+// First Login
+app.get('/', (req, res) => {
+    const token = jwt.sign(
+        {
+            userID: 23,
+            role: 'admin',
+        },
+        'rahasia'
+    );
+    res.json({
+        message: 'Welcome to the API',
+        token: token,
+        env: process.env.JWT_SECRET_TOKEN
+    })
+})
+
 // Use the route to perfix /movies
 app.use('/movies', movies);
 // Use the route to perfix /user
