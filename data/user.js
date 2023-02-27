@@ -84,7 +84,7 @@ const users = [
     },
 ];
 
-router.get('/', function(req, res) {
+router.get('/paginate', function(req, res) {
     const page = parseInt(req.query.page);
     const limit = parseInt(req.query.limit);
 
