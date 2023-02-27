@@ -1,0 +1,25 @@
+{
+  "name": "restful-api---express-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ridhopujiono/Restful-API---Express-JS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ridhopujiono/Restful-API---Express-JS/issues"
+  },
+  "homepage": "https://github.com/ridhopujiono/Restful-API---Express-JS#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2"
+  }
+}
